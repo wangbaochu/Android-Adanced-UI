@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dip"
+        android:background="@color/common_blue_bg"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:singleLine="true" 
+        android:text="Tab Page" />
+    
+    <com.open.ui.viewpager.view.TabPage
+        android:id="@+id/tab_page"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:background="@color/page_bg">
+    </com.open.ui.viewpager.view.TabPage>
+    
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/tab_title"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:background="#ffffffff"
+        android:orientation="horizontal">
+    </LinearLayout>
+    
+    <com.open.ui.viewpager.view.TabTitleScrollBar
+        android:id="@+id/tab_title_scroll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000"
+        android:layout_below="@+id/tab_title"
+        />
+    
+    <View
+        android:id="@+id/tab_title_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tab_title_scroll_bar"
+        android:background="#ff909399" />
+    
+ </RelativeLayout>

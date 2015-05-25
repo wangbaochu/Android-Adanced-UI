@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="tab_activity_tabbar_text_selected">#ff0d86ff</color>
+    <color name="common_text_color_grey">#909399</color>
+    <color name="page_bg">#fff8f8f8</color>
+    <color name="common_blue_bg">#ff0d86ff</color>
+
+</resources>
