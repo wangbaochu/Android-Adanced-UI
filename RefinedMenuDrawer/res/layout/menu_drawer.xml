@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.open.ui.refinedmenudrawer.view.MenuDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_height="fill_parent"
+    android:layout_width="match_parent" >
+    
+    <!--  The main content view -->
+    <LinearLayout
+        android:id="@+id/content_frame"
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+    
+    <!--  The sliding menu drawer -->
+    <LinearLayout
+        android:layout_width="@dimen/drawer_menu_width"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_gravity="left" 
+        android:background="@color/menu_item_background" >
+        
+        <!-- Static divider on top of menu -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawer_menu_divider_height"
+            android:background="@color/drawer_menu_divider_color" />
+        
+        <!-- List of menu items -->
+        <ListView
+            android:id="@+id/menu_drawer_list"
+            android:layout_width="@dimen/drawer_menu_width"
+            android:layout_height="fill_parent"
+            android:choiceMode="singleChoice"
+            android:divider="@color/drawer_menu_divider_color"
+            android:dividerHeight="@dimen/drawer_menu_divider_height"
+            android:fadingEdge="none"
+            android:listSelector="@color/transparent"
+            android:scrollbars="vertical" />
+        
+    </LinearLayout>
+    
+</com.open.ui.refinedmenudrawer.view.MenuDrawerLayout>

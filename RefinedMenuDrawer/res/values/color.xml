@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="drawer_menu_divider_color">#BBBBBB</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="menu_item_background">#EBEBEB</color>
+    <color name="gold">#eb7e10</color>
+
+</resources>

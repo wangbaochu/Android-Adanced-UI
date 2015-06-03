@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.open.ui.refinedmenudrawer.test.TestItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_drawer_item"
+    android:background="@color/menu_item_background"
+    android:paddingLeft="@dimen/menu_item_padding_left_right"
+    android:paddingRight="@dimen/menu_item_padding_left_right"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/menu_item_height" >
+    
+    <TextView
+        android:id="@+id/menu_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/menu_item_text_size"
+        android:textColor="@color/gold" />
+    
+</com.open.ui.refinedmenudrawer.test.TestItemView>
