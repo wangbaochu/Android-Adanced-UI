@@ -41,10 +41,12 @@ public class MainActivity extends Activity {
      */
     private void initListView() {
         mTestPullRefreshListView = (PullToRefreshListView) findViewById(R.id.pull_refresh_list);
-        mTestPullRefreshListView.setMode(Mode.PULL_FROM_START);
+        mTestPullRefreshListView.setMode(Mode.PULL_FROM_START);//or set app:ptrMode="pullFromStart" in xml layout
         mTestPullRefreshListView.getRefreshableView().setDividerHeight(0);
         mTestPullRefreshListView.getRefreshableView().setCacheColorHint(0x00000000);
         mTestPullRefreshListView.getRefreshableView().setSelector(android.R.color.transparent);
+        //whether show the indicator to inform user that the list view can be pull to auto refresh.
+        mTestPullRefreshListView.setShowIndicator(true);
         mTestListAdapter = new TestListAdapter(this);
         mTestPullRefreshListView.setAdapter(mTestListAdapter);
         
