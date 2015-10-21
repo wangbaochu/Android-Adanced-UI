@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ExpandableListView</string>
+    <string name="demo_title">Expandable ListView Demo</string>
+    <string name="action_settings">Settings</string>
+    <string name="item_level_0">Item Level 0</string>
+    <string name="item_level_1">Item Level 1</string>
+    <string name="item_level_2">Item Level 2</string>
+
+</resources>
