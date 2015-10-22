@@ -1,0 +1,7 @@
+特别声明：
+Gallery自从API-LEVEL-16就被谷歌废弃了，Google推荐使用ViewPager和HorizontalScrollView来实现Gallery的效果。
+的确HorizontalScrollView可以实现Gallery的效果，但是HorizontalScrollView存在一个很大的问题，
+如果你仅是用来展示少量的图片，应该是没问题的，但是如果我希望HorizontalScrollView可以像ViewPager一样，绑定数据集（动态改变图片），
+显示大量图片时，就会很容易发生OOM。
+
+本工程就是对HorizontalScrollView进行扩展，自定义HorizontalScrollView实现我们上面提到的效果
