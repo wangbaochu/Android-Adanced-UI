@@ -41,11 +41,11 @@ public class MainActivity extends Activity {
 
         mBigImageView = (ImageView) findViewById(R.id.id_content);
         mRecyclerView.setOnItemScrollChangeListener(new OnItemScrollChangeListener() {
-                    @Override
-                    public void onChange(View view, int position) {
-                        mBigImageView.setImageResource(mDatas.get(position));
-                    };
-                });
+            @Override
+            public void onChange(View view, int position) {
+                mBigImageView.setImageResource(mDatas.get(position));
+            };
+        });
 
         mAdapter.setOnItemClickLitener(new OnItemClickLitener() {
             @Override

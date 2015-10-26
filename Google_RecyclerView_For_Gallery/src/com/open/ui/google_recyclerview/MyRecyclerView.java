@@ -7,6 +7,10 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class MyRecyclerView extends RecyclerView implements OnScrollListener {
+    
+    public interface OnItemScrollChangeListener {
+        void onChange(View view, int position);
+    }
 
     /**
      * 记录当前第一个View
@@ -14,14 +18,8 @@ public class MyRecyclerView extends RecyclerView implements OnScrollListener {
     private View mCurrentView;
 
     private OnItemScrollChangeListener mItemScrollChangeListener;
-
-    public void setOnItemScrollChangeListener(
-            OnItemScrollChangeListener mItemScrollChangeListener) {
+    public void setOnItemScrollChangeListener(OnItemScrollChangeListener mItemScrollChangeListener) {
         this.mItemScrollChangeListener = mItemScrollChangeListener;
-    }
-
-    public interface OnItemScrollChangeListener {
-        void onChange(View view, int position);
     }
 
     public MyRecyclerView(Context context, AttributeSet attrs) {
@@ -49,7 +47,6 @@ public class MyRecyclerView extends RecyclerView implements OnScrollListener {
     @Override
     public void onScrolled(int arg0, int arg1) {
         View newView = getChildAt(0);
-
         if (mItemScrollChangeListener != null) {
             if (newView != null && newView != mCurrentView) {
                 mCurrentView = newView;
