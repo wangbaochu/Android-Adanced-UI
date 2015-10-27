@@ -1,9 +1,11 @@
 package com.open.ui.google_recyclerview;
 
 import android.content.Context;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.OnScrollListener;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class MyRecyclerView extends RecyclerView implements OnScrollListener {
@@ -41,11 +43,13 @@ public class MyRecyclerView extends RecyclerView implements OnScrollListener {
     }
 
     /**
-     * 
      * 滚动时，判断当前第一个View是否发生变化，发生才回调
      */
     @Override
-    public void onScrolled(int arg0, int arg1) {
+    public void onScrolled(int dx, int dy) {
+        int scollX = getScollXDistance();
+        Log.i("MyRecyclerView", "getScollXDistance = " + scollX);
+        
         View newView = getChildAt(0);
         if (mItemScrollChangeListener != null) {
             if (newView != null && newView != mCurrentView) {
@@ -54,5 +58,16 @@ public class MyRecyclerView extends RecyclerView implements OnScrollListener {
             }
         }
     }
-
+   
+    /**
+     * The default getScrollX() doesn't work, change to use this function.
+     * @return the total scroll X distance
+     */
+   public int getScollXDistance() {
+       LinearLayoutManager layoutManager = (LinearLayoutManager) this.getLayoutManager();
+       int position = layoutManager.findFirstVisibleItemPosition();
+       View firstVisiableChildView = layoutManager.findViewByPosition(position);
+       int itemWidth = firstVisiableChildView.getWidth();
+       return (position) * itemWidth - firstVisiableChildView.getLeft();
+   }
 }

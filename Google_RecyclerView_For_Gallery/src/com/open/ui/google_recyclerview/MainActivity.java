@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mAdapter = new GalleryAdapter(this, mDatas);
         mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setItemAnimator(new MyItemAnimator());
 
         mBigImageView = (ImageView) findViewById(R.id.id_content);
         mRecyclerView.setOnItemScrollChangeListener(new OnItemScrollChangeListener() {
