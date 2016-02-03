@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.open.ui.refinedslidingdrawer.test.TestSlidingDrawer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:amazon="http://schemas.android.com/apk/res-auto"    
+    android:id="@+id/sliding_drawer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    amazon:content="@+id/drawer_content"
+    amazon:handle="@+id/drawer_handle"
+    amazon:allowSingleTap="true"
+    amazon:animateOnClick="true"
+    amazon:showContentAfterClose="true"
+    amazon:orientation="vertical" 
+    amazon:bottomOffset="-100dp" >
+
+    <LinearLayout
+        android:id="@+id/drawer_handle" 
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:gravity="center" >
+        <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+            android:src="@drawable/history_tab" />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/drawer_content"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        
+        <!-- Must android:cacheColorHint=white 
+         http://stackoverflow.com/questions/2833057/background-listview-becomes-black-when-scrolling-->
+        <com.open.ui.refinedslidingdrawer.test.TestListView 
+            android:id="@+id/drawer_list_view"
+            android:listSelector="@drawable/no_background_selector"
+            android:cacheColorHint="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:choiceMode="singleChoice"
+            android:background="@color/white" >
+        </com.open.ui.refinedslidingdrawer.test.TestListView>
+        
+    </LinearLayout>
+    
+</com.open.ui.refinedslidingdrawer.test.TestSlidingDrawer>

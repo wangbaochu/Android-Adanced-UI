@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	In some special cases, the ListView item should not have any background
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@color/transparent"/>
+    <item android:state_focused="true" android:drawable="@color/transparent"/>
+    <item android:state_selected="true" android:drawable="@color/transparent"/>
+    <item android:drawable="@color/transparent"/>
+</selector>
+
