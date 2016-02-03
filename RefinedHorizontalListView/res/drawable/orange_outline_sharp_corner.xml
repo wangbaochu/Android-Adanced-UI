@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid 
+        android:color="@color/transparent"/>
+    <stroke 
+        android:width="@dimen/orange_outline_stroke_width" 
+        android:color="@color/gold" />
+    <padding
+        android:left="@dimen/orange_outline_stroke_width"
+        android:top="@dimen/orange_outline_stroke_width"
+        android:right="@dimen/orange_outline_stroke_width"
+        android:bottom="@dimen/orange_outline_stroke_width" />
+</shape>
