@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+view of the page listing footer, if an error, or no results, show the error message
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/page_listing_footer" >
+ 
+    <ProgressBar
+        android:id="@+id/page_listing_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressBarStyle="@attr/android:progressBarStyleSmall"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        />
+
+    <TextView
+        android:id="@+id/page_listing_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_text"
+        android:textStyle="bold"
+        android:text="Loading..."
+        android:padding="8dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+</LinearLayout>
